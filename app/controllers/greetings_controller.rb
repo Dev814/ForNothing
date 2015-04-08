@@ -6,4 +6,4 @@ class GreetingsController < ApplicationController
 
 end
 
-# call render in controller avoids creating a view
+# calling render in controller avoids creating a view
