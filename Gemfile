@@ -44,5 +44,9 @@ group :development, :test do
   gem 'spring'
 
   gem 'rails_12factor', group: :production
+
+  gem 'byebug'
+  #stop execution, interact with environment in that state, remove statements from code before pushing to Heroku
+
 end
 

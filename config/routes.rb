@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
- root 'greetings#index'
+  resources :freebies
+
+  root 'welcome#index'
 
 end
