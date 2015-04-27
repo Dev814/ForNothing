@@ -1,4 +1,48 @@
-<h1>Tell Us</h1>
+<%= render "form" %>
+
+
+<%= form_for :freebie, url: freebies_path do |f| %>
+
+<% end %>
+
+<%= link_to 'Back', freebies_path %>
+
+
+
+
+<!-- <h1>Add a freebie</h1>
+
+<%= form_for @freebie do |f| %>
+  <div>
+    <%= f.label :item %><br>
+    <%= f.text_field :item %>
+  </div>
+
+  <div>
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :location %><br>
+    <%= f.text_field :location, placeholder: "ex. New York, NY" %>
+  </div>
+
+  <div>
+    <%= f.label :description %><br>
+    <%= f.text_area :description, placeholder: "Give us the details" %>
+  </div>
+
+  <div>
+    <%= f.submit "Post" %>
+  </div>
+<% end %> -->
+
+
+
+<!-- OLD FORM -->
+
+<!-- <h1>Add a freebie</h1>
 
 <%= form_for @freebie, url: freebies_path do |f| %>
   <p>
@@ -24,4 +68,4 @@
   <p>
     <%= f.submit "Post" %>
   </p>
-<% end %>
+<% end %> -->

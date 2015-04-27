@@ -1,0 +1,39 @@
+<h1>All Freebies</h1>
+
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @freebie.each do |freebie| %>
+    <tr>
+      <td><%= freebie.item %></td>
+      <td><%= freebie.date %></td>
+      <td><%= freebie.location %></td>
+      <td><%= freebie.description %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p id='notice'><%= notice %></p>
+
+<% @freebies.each do |freebie| %>
+  <p><%= freebie.item %></p>
+  <p><%= freebie.date %></p>
+  <p><%= freebie.location %></p>
+  <p><%= freebie.description %></p>
+  <h5><%= link_to "Edit Item", edit_freebie_path(freebie)%></h5>
+<% end %>
+
+<%= link_to 'Post New Item', new_freeby_path %>
+<br/>
+
+
+
+
+
+
+
