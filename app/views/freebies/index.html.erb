@@ -1,11 +1,12 @@
-<h1>All Freebies</h1>
+<h1>List of all Freebies</h1>
 
 
 
 <table>
   <tr>
-    <th>Title</th>
+    <th>Item</th>
     <th>Text</th>
+    <th colspan="3"></th>
   </tr>
 
   <% @freebie.each do |freebie| %>
@@ -14,19 +15,16 @@
       <td><%= freebie.date %></td>
       <td><%= freebie.location %></td>
       <td><%= freebie.description %></td>
+      <td><%= link_to 'Edit', edit_freeby_path(freebie)%></td>
+      <td><%= link_to 'Destroy', freeby_path(freebie),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td></td>
     </tr>
+
   <% end %>
 </table>
 
 <p id='notice'><%= notice %></p>
-
-<% @freebies.each do |freebie| %>
-  <p><%= freebie.item %></p>
-  <p><%= freebie.date %></p>
-  <p><%= freebie.location %></p>
-  <p><%= freebie.description %></p>
-  <h5><%= link_to "Edit Item", edit_freebie_path(freebie)%></h5>
-<% end %>
 
 <%= link_to 'Post New Item', new_freeby_path %>
 <br/>

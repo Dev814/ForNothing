@@ -13,17 +13,7 @@ class FreebiesController < ApplicationController
   end
 
   def create
-
-
-    # item = params[:freebie][:item]
-    # date = params[:freebie][:date]
-    # location = params[:freebie][:location]
-    # description = params[:freebie][:description]
-    # @freebie = Freebie.new(item: item, date: date, location: location, description: description)
-
-    # @freebie = Freebie.new freebie_params
     @freebie = Freebie.new(freebie_params)
-
     respond_to do |format|
       if @freebie.save
         format.html { redirect_to freebies_path, notice: 'Freebie was successfully created.' }
@@ -35,17 +25,19 @@ class FreebiesController < ApplicationController
     end
   end
 
-  #   @freebie.save
-  #   redirect_to @freebie
-  # end
-
   def edit
     @freebie = Freebie.find(params[:id])
   end
 
   def update
     @freebie = Freebie.find(params[:id])
-    @freebie.update_attributes(freebie_param)
+    @freebie.update_attributes(freebie_params)
+    redirect_to freebie_path
+  end
+
+  def destroy
+    @freebie = Freebie.find(params[:id])
+    @freebie.destroy
     redirect_to freebies_path
   end
 
