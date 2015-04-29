@@ -2,6 +2,7 @@ class FreebiesController < ApplicationController
 
   before_action :authenticate_user!
 
+
   def index
     @freebies = Freebie.all
     # @comment = Comment.new
@@ -35,7 +36,7 @@ class FreebiesController < ApplicationController
   def update
     @freebie = Freebie.find(params[:id])
     @freebie.update_attributes(freebie_params)
-    redirect_to freebie_path
+    redirect_to freeby_path
   end
 
   def destroy
