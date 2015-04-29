@@ -1,11 +1,14 @@
 class FreebiesController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
-    @freebie = Freebie.all
+    @freebies = Freebie.all
+    # @comment = Comment.new
   end
 
   def show
-    @freebie = Freebie.find(params[:id])
+    @freeby = Freebie.find(params[:id])
   end
 
    def new

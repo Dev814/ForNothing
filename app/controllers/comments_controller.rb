@@ -1,8 +1,11 @@
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+
+  def new
+     @freebie = Freebie.find(params[:freeby_id])
+  end
 
   def create
-    @freebie = Freebie.find(params[:freebie_id])
+    @freebie = Freebie.find(params[:freeby_id])
     # Create a comment
     # a = Comment.new(freebie_id: , text:" hello" )
 

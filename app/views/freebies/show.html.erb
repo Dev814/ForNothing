@@ -1,25 +1,25 @@
 <p>
   <strong>Item:</strong>
-  <%= @freebie.item %>
+  <%= @freeby.item %>
 </p>
 
 <p>
   <strong>Date:</strong>
-  <%= @freebie.date %>
+  <%= @freeby.date %>
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @freebie.location %>
+  <%= @freeby.location %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @freebie.description %>
+  <%= @freeby.description %>
 </p>
 
 <h2>Comments</h2>
-<% @freebie.comments.each do |comment| %>
+<% @freeby.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
     <%= comment.commenter %>
@@ -32,7 +32,7 @@
 <% end %>
 
 <h2>Add a comment:</h2>
-<%= form_for([@freebie, @freeby.comments.build]) do |f| %>
+<%= form_for([@freeby, @freeby.comments.build]) do |f| %>
   <p>
     <%= f.label :commenter %><br>
     <%= f.text_field :commenter %>
@@ -46,5 +46,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_freeby_path(@freebie) %> |
+<%= link_to 'Edit', edit_freeby_path(@freeby) %> |
 <%= link_to 'Back', freebies_path %>

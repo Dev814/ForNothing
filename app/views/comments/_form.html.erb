@@ -1,0 +1,7 @@
+<%= form_for [freebie, comment] do |f| %>
+  <div>
+    <%= f.text_field :body, placeholder: "Comment" %>
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
+

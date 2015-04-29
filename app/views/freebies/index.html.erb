@@ -9,7 +9,7 @@
     <th colspan="3"></th>
   </tr>
 
-  <% @freebie.each do |freebie| %>
+  <% @freebies.each do |freebie| %>
     <tr>
       <td><%= freebie.item %></td>
       <td><%= freebie.date %></td>
@@ -18,9 +18,9 @@
       <td><%= link_to 'Edit', edit_freeby_path(freebie)%></td>
       <td><%= link_to 'Destroy', freeby_path(freebie),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td></td>
+              data: { confirm: 'Are you sure?' } %></td>
+      <td><%= render :partial => '/comments/form', locals: {comment: Comment.new, freebie: freebie} %></td>
     </tr>
-
   <% end %>
 </table>
 
